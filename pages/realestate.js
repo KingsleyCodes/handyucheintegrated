@@ -9,7 +9,7 @@ export default function RealEstate() {
       
       <main className="flex-grow">
         {/* Hero Section */}
-     <section 
+        <section 
           className="relative py-16 md:py-44 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/real-hero.jpg')" }}
         >
@@ -112,7 +112,7 @@ export default function RealEstate() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Selling</h3>
                 <p className="text-gray-600">
-                  Maximize your property's value and sell quickly with our strategic marketing approach.
+                  Maximize your property&apos;s value and sell quickly with our strategic marketing approach.
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ export default function RealEstate() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Property Management</h3>
                 <p className="text-gray-600">
-                  Comprehensive management services to maintain and maximize your investment property's value.
+                  Comprehensive management services to maintain and maximize your investment property&apos;s value.
                 </p>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function RealEstate() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Whether you're looking to buy your dream home, sell your current property, find a rental, or need assistance managing your real estate assets, our team of experienced professionals is here to guide you every step of the way.
+              Whether you&apos;re looking to buy your dream home, sell your current property, find a rental, or need assistance managing your real estate assets, our team of experienced professionals is here to guide you every step of the way.
             </p>
             <p className="text-xl mb-10 max-w-3xl mx-auto">
               We offer personalized service tailored to your specific needs and goals.

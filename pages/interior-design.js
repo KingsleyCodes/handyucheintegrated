@@ -11,7 +11,7 @@ export default function InteriorDesign() {
       {/* Hero Section with Background Image */}
         <section 
           className="relative py-16 md:py-44 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('decor-hero.jpg')" }}
+          style={{ backgroundImage: "url(&apos;decor-hero.jpg&apos;)" }}
         >
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -41,7 +41,7 @@ export default function InteriorDesign() {
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                   <span className="text-3xl font-bold text-blue-600">1</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Discover & Listen</h3>
+                <h3 className="text-xl font-semibold mb-4">Discover &amp; Listen</h3>
                 <p className="text-gray-600">
                   We begin by understanding your needs, style, and the potential of your space.
                 </p>
@@ -52,7 +52,7 @@ export default function InteriorDesign() {
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                   <span className="text-3xl font-bold text-blue-600">2</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Concept & Design</h3>
+                <h3 className="text-xl font-semibold mb-4">Concept &amp; Design</h3>
                 <p className="text-gray-600">
                   Our team translates your vision into a detailed design plan and 3D model for approval.
                 </p>
@@ -63,7 +63,7 @@ export default function InteriorDesign() {
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                   <span className="text-3xl font-bold text-blue-600">3</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Execution & Handover</h3>
+                <h3 className="text-xl font-semibold mb-4">Execution &amp; Handover</h3>
                 <p className="text-gray-600">
                   We manage the project from procurement to installation, delivering your dream space efficiently.
                 </p>
@@ -141,7 +141,7 @@ export default function InteriorDesign() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
             <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
-              We pride ourselves on our client's satisfaction. Here's what they have to say about their experiences.
+              We pride ourselves on our client&apos;s satisfaction. Here&apos;s what they have to say about their experiences.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -157,7 +157,7 @@ export default function InteriorDesign() {
                   </div>
                 </div>
                 <p className="text-gray-600 italic">
-                  "The team at Integrated Services exceeded our expectations, delivering exceptional results. Their attention to detail and commitment to quality transformed our space into something beyond our imagination."
+                  &quot;The team at Integrated Services exceeded our expectations, delivering exceptional results. Their attention to detail and commitment to quality transformed our space into something beyond our imagination.&quot;
                 </p>
               </div>
 
@@ -173,7 +173,7 @@ export default function InteriorDesign() {
                   </div>
                 </div>
                 <p className="text-gray-600 italic">
-                  "Their professionalism and creative solutions impressed us throughout the project. They delivered a highly functional, beautifully designed space that perfectly meets our needs and reflects our brand identity."
+                  &quot;Their professionalism and creative solutions impressed us throughout the project. They delivered a highly functional, beautifully designed space that perfectly meets our needs and reflects our brand identity.&quot;
                 </p>
               </div>
             </div>
