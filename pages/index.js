@@ -48,14 +48,27 @@ export default function Home() {
                 <p className="text-gray-600 mb-4">
                   Transform your living space with our expert interior design services, creating a home that reflects your style and meets your needs.
                 </p>
-                <Link href="/interior-design" passHref>
-                  <a className="text-blue-600 font-semibold flex items-center">
-                    Learn More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </Link>
+                <Link 
+  href="/interior-design" 
+  className="text-blue-600 font-semibold flex items-center"
+>
+  Learn More
+  <svg 
+    className="w-4 h-4 ml-1" 
+    fill="none" 
+    stroke="currentColor" 
+    viewBox="0 0 24 24" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      strokeWidth={2} 
+      d="M9 5l7 7-7 7" 
+    />
+  </svg>
+</Link>
+
               </div>
 
               {/* Real Estate */}
@@ -89,14 +102,27 @@ export default function Home() {
                 <p className="text-gray-600 mb-4">
                   Enjoy delicious, chef-prepared meals delivered to your door, catering to your dietary preferences and saving you time.
                 </p>
-                <Link href="/food-services" passHref>
-                  <a className="text-blue-600 font-semibold flex items-center">
-                    Learn More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </Link>
+                <Link 
+  href="/food-services" 
+  className="text-blue-600 font-semibold flex items-center"
+>
+  Learn More
+  <svg 
+    className="w-4 h-4 ml-1" 
+    fill="none" 
+    stroke="currentColor" 
+    viewBox="0 0 24 24" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      strokeWidth={2} 
+      d="M9 5l7 7-7 7" 
+    />
+  </svg>
+</Link>
+
               </div>
 
               {/* Laundry Services */}
@@ -110,14 +136,27 @@ export default function Home() {
                 <p className="text-gray-600 mb-4">
                   Experience the convenience of our professional laundry services, ensuring your clothes are cleaned, pressed, and delivered with care.
                 </p>
-                <Link href="/laundry-services" passHref>
-                  <a className="text-blue-600 font-semibold flex items-center">
-                    Learn More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </Link>
+               <Link 
+  href="/laundry-services" 
+  className="text-blue-600 font-semibold flex items-center"
+>
+  Learn More
+  <svg 
+    className="w-4 h-4 ml-1" 
+    fill="none" 
+    stroke="currentColor" 
+    viewBox="0 0 24 24" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      strokeWidth={2} 
+      d="M9 5l7 7-7 7" 
+    />
+  </svg>
+</Link>
+
               </div>
             </div>
           </div>
