@@ -1,6 +1,7 @@
 // components/Navbar.js
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,17 @@ export default function Navbar() {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-blue-800">Integrated Services</Link>
+          <Link href="/" className="flex items-center">
+            {/* Replace with your actual logo image */}
+            <Image 
+              src="/logo.png" // Update this path to your logo
+              alt="Integrated Services Logo"
+              width={240} // Adjust based on your logo dimensions
+              height={80} // Adjust based on your logo dimensions
+              className="h-16 w-auto" // Responsive sizing
+              priority // Optional: for above-the-fold images
+            />
+          </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
