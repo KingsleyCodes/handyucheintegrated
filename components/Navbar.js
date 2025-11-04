@@ -15,8 +15,8 @@ export default function Navbar() {
             <Image 
               src="/logo.png" // Update this path to your logo
               alt="Integrated Services Logo"
-              width={240} // Adjust based on your logo dimensions
-              height={80} // Adjust based on your logo dimensions
+              width={140} // Adjust based on your logo dimensions
+              height={60} // Adjust based on your logo dimensions
               className="h-16 w-auto" // Responsive sizing
               priority // Optional: for above-the-fold images
             />
@@ -29,7 +29,8 @@ export default function Navbar() {
             <Link href="/realestate" className="text-gray-700 hover:text-blue-600 transition-colors">Realestate</Link>
             <Link href="/food-services" className="text-gray-700 hover:text-blue-600 transition-colors">Food Services</Link>
             <Link href="/laundry-services" className="text-gray-700 hover:text-blue-600 transition-colors">Laundry Services</Link>
-            <Link href="#" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Get Started</Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+            <Link href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Get Started</Link>
           </div>
           
           {/* Mobile Menu Button */}
@@ -53,7 +54,8 @@ export default function Navbar() {
             <Link href="/realestate" className="block text-gray-700 hover:text-blue-600 transition-colors">realestate</Link>
             <Link href="/food-services" className="block text-gray-700 hover:text-blue-600 transition-colors">food services</Link>
             <Link href="/laundry-services" className="block text-gray-700 hover:text-blue-600 transition-colors">Laundry services</Link>
-            <Link href="#" className="block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors w-max">Get Started</Link>
+            
+            <Link href="contact" className="block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors w-max">Get Started</Link>
           </div>
         )}
       </div>
