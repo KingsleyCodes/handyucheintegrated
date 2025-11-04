@@ -24,7 +24,8 @@ export default function Contact() {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you within 24 hours.');
+    // This alert uses a JS string, which is fine, but if you used JSX to render it, it'd need escaping.
+    alert('Thank thank you for your message! We will get back to you within 24 hours.'); 
     // Reset form
     setFormData({
       firstName: '',
@@ -46,7 +47,7 @@ export default function Contact() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Get In Touch</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to transform your living experience? Contact us for a personalized consultation and let's create something amazing together.
+              Ready to transform your living experience? Contact us for a personalized consultation and **let&apos;s** create something amazing together.
             </p>
           </div>
         </section>
@@ -58,9 +59,9 @@ export default function Contact() {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Start Your Project</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">**Let&apos;s** Start Your Project</h2>
                   <p className="text-gray-600 text-lg">
-                    We're here to answer your questions and help you begin your journey to premium living. 
+                    **We&apos;re** here to answer your questions and help you begin your journey to premium living. 
                     Reach out to us through any of the following methods.
                   </p>
                 </div>
