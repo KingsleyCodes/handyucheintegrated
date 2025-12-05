@@ -63,7 +63,7 @@ export default function Navbar() {
               href="/contact" 
               className="bg-gradient-to-r from-[#0D5C3E] to-[#1A3C2E] text-white px-6 py-2.5 rounded-lg hover:from-[#0A4A32] hover:to-[#152A21] transition-all duration-300 transform hover:scale-105 shadow-lg font-medium"
             >
-              Get Started
+              Contact Us
             </Link>
           </div>
           
