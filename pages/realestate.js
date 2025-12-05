@@ -154,7 +154,7 @@ export default function RealEstate() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Property Marketing</h3>
                 <p className="text-gray-600 mb-4">
-                  Comprehensive marketing solutions to maximize your property's visibility and value.
+                  Comprehensive marketing solutions to maximize your **property&apos;s** visibility and value.
                 </p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
                   <li className="flex items-center gap-2">
@@ -311,7 +311,7 @@ export default function RealEstate() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Find Your Perfect Property</h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Whether you're looking to rent, buy, invest, or market your property, our expert team is here to provide personalized solutions tailored to your real estate goals.
+              Whether **you&apos;re** looking to rent, buy, invest, or market your property, our expert team is here to provide personalized solutions tailored to your real estate goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">

@@ -1,10 +1,11 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Wrapper } from '@googlemaps/react-wrapper';
 
 const MapComponent = ({ location }) => {
   const [map, setMap] = useState(null);
   const [marker, setMarker] = useState(null);
+  const mapRef = useRef(null); // Fixed: Using useRef instead of useState for DOM reference
 
   useEffect(() => {
     if (map && location) {
@@ -17,7 +18,7 @@ const MapComponent = ({ location }) => {
       const newMarker = new google.maps.Marker({
         position: location,
         map: map,
-        title: 'Rich Royal Estate, FHA, behind Living Faith Church, Municipal, Lugbe 900107, FCT', // ✅ COMMA ADDED HERE
+        title: 'Rich Royal Estate, FHA, behind Living Faith Church, Municipal, Lugbe 900107, FCT',
         animation: google.maps.Animation.DROP,
       });
 
@@ -30,14 +31,19 @@ const MapComponent = ({ location }) => {
           '_blank'
         );
       });
-    }
-  }, [map, location]);
 
-  const ref = useState(null);
+      // Cleanup function
+      return () => {
+        if (newMarker) {
+          newMarker.setMap(null);
+        }
+      };
+    }
+  }, [map, location, marker]); // Fixed: Added 'marker' to dependencies
 
   useEffect(() => {
-    if (ref.current && !map) {
-      const newMap = new google.maps.Map(ref.current, {
+    if (mapRef.current && !map) {
+      const newMap = new google.maps.Map(mapRef.current, {
         center: location,
         zoom: 15,
         styles: [
@@ -67,16 +73,21 @@ const MapComponent = ({ location }) => {
       });
 
       setMap(newMap);
-    }
-  }, [ref, location]);
 
-  return <div ref={ref} className="w-full h-full" />;
+      // Cleanup function
+      return () => {
+        // Google Maps cleanup if needed
+      };
+    }
+  }, [map, location]); // Fixed: Added 'map' to dependencies
+
+  return <div ref={mapRef} className="w-full h-full" />;
 };
 
 const MapLoading = () => (
   <div className="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center">
     <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0D5C3E] mx-auto mb-4"></div>
       <p className="text-gray-600">Loading Map...</p>
     </div>
   </div>
@@ -93,9 +104,8 @@ const MapError = () => (
 );
 
 export default function InteractiveMap() {
-  // Replace these coordinates with your actual location
   const location = {
-    lat: 9.00292, // Your coordinates
+    lat: 9.00292,
     lng: 7.34255,
   };
 
@@ -119,7 +129,7 @@ export default function InteractiveMap() {
             `https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`,
             '_blank'
           )}
-          className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+          className="mt-2 px-4 py-2 bg-gradient-to-r from-[#0D5C3E] to-[#1A3C2E] text-white rounded-lg hover:from-[#0A4A32] hover:to-[#152A21] transition-all duration-300 text-sm"
         >
           Get Directions
         </button>

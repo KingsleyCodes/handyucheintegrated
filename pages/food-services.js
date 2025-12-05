@@ -172,7 +172,7 @@ export default function FoodServices() {
                   </li>
                   <li className="flex items-center gap-2">
                     <FaStar className="text-yellow-500" />
-                    Chef's Specials
+                    Chef&apos;s Specials
                   </li>
                 </ul>
               </div>
