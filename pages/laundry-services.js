@@ -1,6 +1,29 @@
 // pages/laundry-services.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { 
+  FaTshirt,
+  FaTruck,
+  FaHome,
+  FaStar,
+  FaShieldAlt,
+  FaClock,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaRecycle
+} from 'react-icons/fa';
+import { 
+  MdLocalLaundryService,
+  MdDryCleaning,
+  MdOutlineBed,
+  MdOutlineCleaningServices
+} from 'react-icons/md';
+import { 
+  GiWashingMachine,
+  GiSoap,
+  GiWaterDrop,
+  GiClothes
+} from 'react-icons/gi';
 
 export default function LaundryServices() {
   return (
@@ -8,184 +31,283 @@ export default function LaundryServices() {
       <Navbar />
       
       <main className="flex-grow">
-     <section 
+        {/* Hero Section */}
+        <section 
           className="relative py-16 md:py-44 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/laundry-hero.jpg')" }}
         >
-          {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Your All-in-One Solution for Home and Lifestyle</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Premium Cleaning & Laundry Services</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
-              We offer a comprehensive suite of services, from interior design and real estate to food and laundry, tailored to enhance your living experience.
+              Professional cleaning solutions with convenient drop-off and home service options for your complete comfort.
             </p>
-            <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100">
-              Explore Services
+            <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center mx-auto gap-2">
+              <MdLocalLaundryService className="text-xl" />
+              Schedule Service
             </button>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Services Overview Section */}
         <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Services</h2>
-            
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Cleaning & Laundry Services</h2>
+            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
+              Comprehensive cleaning solutions designed to keep your clothes and home fresh, clean, and well-maintained.
+            </p>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Wash & Fold */}
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
+              {/* Drop-off Service */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
+                  <GiWashingMachine className="text-3xl text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Wash & Fold</h3>
-                <p className="text-gray-600">
-                  Freshly laundered and neatly folded clothes, ready to wear.
+                <h3 className="text-xl font-semibold mb-4">Drop-off Service</h3>
+                <p className="text-gray-600 mb-4">
+                  Convenient self-service laundry with professional-grade equipment and supplies.
                 </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <GiWashingMachine className="text-blue-500" />
+                    Self-Service Laundry
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiSoap className="text-blue-500" />
+                    Premium Detergents
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaClock className="text-blue-500" />
+                    Flexible Hours
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaShieldAlt className="text-blue-500" />
+                    Secure Facility
+                  </li>
+                </ul>
+              </div>
+
+              {/* Home Service */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-green-200 transition-colors">
+                  <FaHome className="text-3xl text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Home Service</h3>
+                <p className="text-gray-600 mb-4">
+                  Professional cleaning teams come to your location for ultimate convenience.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <FaTruck className="text-green-500" />
+                    Pickup & Delivery
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiClothes className="text-green-500" />
+                    Full Service Laundry
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MdOutlineCleaningServices className="text-green-500" />
+                    Home Cleaning
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaStar className="text-green-500" />
+                    Premium Treatment
+                  </li>
+                </ul>
+              </div>
+
+              {/* Wash & Fold */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-purple-200 transition-colors">
+                  <FaTshirt className="text-3xl text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Wash & Fold</h3>
+                <p className="text-gray-600 mb-4">
+                  Freshly laundered and neatly folded clothes, ready to wear or store.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <GiWaterDrop className="text-purple-500" />
+                    Professional Washing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaTshirt className="text-purple-500" />
+                    Precision Folding
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiSoap className="text-purple-500" />
+                    Eco-Friendly Detergents
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaRecycle className="text-purple-500" />
+                    Same-Day Service Available
+                  </li>
+                </ul>
               </div>
 
               {/* Dry Cleaning */}
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 极 9 9 0 0118 0z" />
-                  </svg>
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-yellow-200 transition-colors">
+                  <MdDryCleaning className="text-3xl text-yellow-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Dry Cleaning</h3>
-                <p className="text-gray-600">
-                  Expert care for your delicate fabrics and special garments.
+                <h3 className="text-xl font-semibold mb-4">Dry Cleaning</h3>
+                <p className="text-gray-600 mb-4">
+                  Expert care for delicate fabrics, formal wear, and special garments.
                 </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <MdDryCleaning className="text-yellow-500" />
+                    Delicate Fabrics
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaTshirt className="text-yellow-500" />
+                    Formal Wear
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiClothes className="text-yellow-500" />
+                    Specialty Items
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaShieldAlt className="text-yellow-500" />
+                    Stain Protection
+                  </li>
+                </ul>
               </div>
 
-              {/* Specialty Items */}
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
+              {/* Bedding & Linens */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-red-200 transition-colors">
+                  <MdOutlineBed className="text-3xl text-red-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Specialty Items</h3>
-                <p className="text-gray-600">
-                  Handling unique items like leather, suede, and more with precision.
+                <h3 className="text-xl font-semibold mb-4">Bedding & Linens</h3>
+                <p className="text-gray-600 mb-4">
+                  Deep cleaning for bedding, towels, and household linens.
                 </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <MdOutlineBed className="text-red-500" />
+                    Bed Sheets & Comforters
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiClothes className="text-red-500" />
+                    Towels & Bath Mats
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaTshirt className="text-red-500" />
+                    Table Linens
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiWaterDrop className="text-red-500" />
+                    Hypoallergenic Cleaning
+                  </li>
+                </ul>
               </div>
 
-              {/* Bedding */}
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
+              {/* Specialty Services */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-indigo-200 transition-colors">
+                  <FaStar className="text-3xl text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Bedding</h3>
-                <p className="text-gray-600">
-                  Clean and comfortable bedding for a refreshing sleep.
+                <h3 className="text-xl font-semibold mb-4">Specialty Services</h3>
+                <p className="text-gray-600 mb-4">
+                  Specialized cleaning for unique items and premium garments.
                 </p>
-              </div>
-
-              {/* Towels */}
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Towels</h3>
-                <p className="text-gray-600">
-                  Soft, absorbent, and perfectly cleaned towels.
-                </p>
-              </div>
-
-              {/* Pickup & Delivery */}
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="current极" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Pickup & Delivery</h3>
-                <p className="text-gray-600">
-                  Convenient service right to your doorstep.
-                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <GiClothes className="text-indigo-500" />
+                    Leather & Suede
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaTshirt className="text-indigo-500" />
+                    Wedding Gowns
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MdDryCleaning className="text-indigo-500" />
+                    Curtains & Drapes
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaShieldAlt className="text-indigo-500" />
+                    Preservation Services
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Service Options Section */}
         <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Pricing</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How Our Service Works</h2>
             
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white rounded-lg overflow-hidden shadow-md">
-                <thead className="bg-blue-500 text-white">
-                  <tr>
-                    <th className="py-4 px-6 text-left">SERVICE</th>
-                    <th className="py-4 px-6 text-right">PRICE</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="py-4 px-6 font-medium">Wash & Fold (per pound)</td>
-                    <td className="py-4 px-6 text-right">$1.50</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="py-4 px-6 font-medium">Dry Cleaning (per item)</td>
-                    <td className="py-4 px-6 text-right">Varies</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="py-4 px-6 font-medium">Specialty items (per item)</td>
-                    <td className="py-4 px-6 text-right">Varies</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="py-4 px-6 font-medium">Bedding (per set)</td>
-                    <td className="py-4 px-6 text-right">$20.00</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50">
-                    <td className="py-4 px-6 font-medium">Towels (per set)</td>
-                    <td className="py-4 px-6 text-right">$10.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <div className="mt-8 bg-blue-100 p-6 rounded-lg">
-              <p className="text-blue-800">
-                We offer convenient pickup and delivery services within a 10-mile radius. Schedule your pickup online or by phone. Delivery is typically within 24-48 hours.
-              </p>
-            </div>
-          </div>
-        </section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Drop-off Process */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-6">
+                  <GiWashingMachine className="text-4xl text-blue-600" />
+                  <h3 className="text-2xl font-bold text-gray-900">Drop-off Service</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-blue-600 font-semibold text-sm">1</span>
+                    </div>
+                    <p className="text-gray-600">Bring your laundry to our facility during operating hours</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-blue-600 font-semibold text-sm">2</span>
+                    </div>
+                    <p className="text-gray-600">Choose your preferred service and detergent options</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-blue-600 font-semibold text-sm">3</span>
+                    </div>
+                    <p className="text-gray-600">Relax while we handle the cleaning with care</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-blue-600 font-semibold text-sm">4</span>
+                    </div>
+                    <p className="text-gray-600">Pick up your fresh, clean laundry when ready</p>
+                  </div>
+                </div>
+              </div>
 
-        {/* FAQ Section */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            
-            <div className="max-w-3xl mx-auto space-y-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-2 text-blue-600">How do I schedule a pickup?</h3>
-                <p className="text-gray-600">
-                  You can schedule a pickup through our online portal, by calling our customer service team, or using our mobile app. We offer flexible scheduling to accommodate your needs.
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-2 text-blue-600">What is the turnaround time?</h3>
-                <p className="text-gray-600">
-                  Standard service has a 24-48 hour turnaround time. We also offer express service for an additional fee, which guarantees same-day or next-morning delivery.
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-2 text-blue-600">Do you offer same-day service?</h3>
-                <p className="text-gray-600">
-                  Yes, we offer same-day express service for an additional charge. Orders must be placed before 10 AM to qualify for same-day delivery.
-                </p>
+              {/* Home Service Process */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-6">
+                  <FaHome className="text-4xl text-green-600" />
+                  <h3 className="text-2xl font-bold text-gray-900">Home Service</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-green-600 font-semibold text-sm">1</span>
+                    </div>
+                    <p className="text-gray-600">Schedule pickup online or by phone at your convenience</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-green-600 font-semibold text-sm">2</span>
+                    </div>
+                    <p className="text-gray-600">Our team collects your laundry from your doorstep</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-green-600 font-semibold text-sm">3</span>
+                    </div>
+                    <p className="text-gray-600">Professional cleaning with premium care</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-green-600 font-semibold text-sm">4</span>
+                    </div>
+                    <p className="text-gray-600">Fresh laundry delivered back to your home</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -194,13 +316,20 @@ export default function LaundryServices() {
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Experience the convenience of professional laundry services tailored to your needs.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Experience Premium Cleaning</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Choose between convenient drop-off service or premium home pickup and delivery. Fresh, clean laundry delivered with care and professionalism.
             </p>
-            <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100">
-              Schedule a Pickup Today
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                <GiWashingMachine className="text-xl" />
+                Drop-off Service
+              </button>
+              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
+                <FaHome className="text-xl" />
+                Schedule Home Service
+              </button>
+            </div>
           </div>
         </section>
       </main>

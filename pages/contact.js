@@ -1,6 +1,7 @@
 // pages/contact.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import InteractiveMap from '../components/InteractiveMap'; // ← Add this import
 import { useState } from 'react';
 
 export default function Contact() {
@@ -24,8 +25,7 @@ export default function Contact() {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    // This alert uses a JS string, which is fine, but if you used JSX to render it, it'd need escaping.
-    alert('Thank thank you for your message! We will get back to you within 24 hours.'); 
+    alert('Thank you for your message! We will get back to you within 24 hours.');
     // Reset form
     setFormData({
       firstName: '',
@@ -47,7 +47,7 @@ export default function Contact() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Get In Touch</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to transform your living experience? Contact us for a personalized consultation and **let&apos;s** create something amazing together.
+              Ready to transform your living experience? Contact us for a personalized consultation and let&apos;s create something amazing together.
             </p>
           </div>
         </section>
@@ -59,9 +59,9 @@ export default function Contact() {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">**Let&apos;s** Start Your Project</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Let&apos;s Start Your Project</h2>
                   <p className="text-gray-600 text-lg">
-                    **We&apos;re** here to answer your questions and help you begin your journey to premium living. 
+                    We&apos;re here to answer your questions and help you begin your journey to premium living. 
                     Reach out to us through any of the following methods.
                   </p>
                 </div>
@@ -76,7 +76,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600 text-lg">+1 (555) 123-4567</p>
+                      <p className="text-gray-600 text-lg">09062166841</p>
                       <p className="text-gray-500">Mon-Fri: 8:00 AM - 6:00 PM</p>
                     </div>
                   </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">Email</h3>
                       <p className="text-gray-600 text-lg">hello@handyuche.com</p>
-                      <p className="text-gray-500">We respond within 24 hours</p>
+                      <p className="text-gray-500">We respond within 6 hours</p>
                     </div>
                   </div>
 
@@ -103,8 +103,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">Office</h3>
-                      <p className="text-gray-600">123 Luxury Avenue</p>
-                      <p className="text-gray-600">Premium District, City 10001</p>
+                      <p className="text-gray-600">Rich Royal Estate, FHA</p>
+                      <p className="text-gray-600">behind Living Faith Church,Lugbe 900107. FCT</p>
                       <p className="text-gray-500">By appointment only</p>
                     </div>
                   </div>
@@ -195,7 +195,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+2349062166841"
                     />
                   </div>
 
@@ -247,7 +247,7 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Map Section */}
+        {/* Map Section - REPLACED WITH INTERACTIVE MAP */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -256,15 +256,9 @@ export default function Contact() {
                 Schedule an appointment to visit our showroom and experience our services firsthand.
               </p>
             </div>
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-4xl mb-4">📍</div>
-                  <p className="text-gray-600">Interactive Map Coming Soon</p>
-                  <p className="text-gray-500 text-sm">123 Luxury Avenue, Premium District, City 10001</p>
-                </div>
-              </div>
-            </div>
+            
+            {/* Replace the placeholder with your InteractiveMap component */}
+            <InteractiveMap />
           </div>
         </section>
       </main>

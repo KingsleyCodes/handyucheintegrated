@@ -1,6 +1,32 @@
 // pages/interior-design.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { 
+  FaHome, 
+  FaBuilding, 
+  FaCouch, 
+  FaLightbulb, 
+  FaGraduationCap, 
+  FaStar,
+  FaSearch,
+  FaPalette,
+  FaTools,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt
+} from 'react-icons/fa';
+import { 
+  GiOfficeChair, 
+  GiKitchenTap, 
+  GiBed, 
+  GiDesk,
+  GiWoodenChair, // Replacement for GiDiningTable
+  GiBookshelf
+} from 'react-icons/gi';
+import { 
+  MdDesignServices,
+  MdOutlineSupportAgent
+} from 'react-icons/md';
 
 export default function InteriorDesign() {
   return (
@@ -8,27 +34,221 @@ export default function InteriorDesign() {
       <Navbar />
       
       <main className="flex-grow">
-      {/* Hero Section with Background Image */}
+        {/* Hero Section with Background Image */}
         <section 
           className="relative py-16 md:py-44 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/decor.jpg')" }}
         >
-          {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Your All-in-One Solution for Home and Lifestyle</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Interior Design & Furniture Solutions</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
-              We offer a comprehensive suite of services, from interior design and real estate to food and laundry, tailored to enhance your living experience.
+              Complete interior transformation with custom furniture, professional design services, and expert consultation.
             </p>
-            <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100">
-              Explore Services
+            <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center mx-auto gap-2">
+              <MdDesignServices className="text-xl" />
+              Start Your Project
             </button>
           </div>
         </section>
 
-        {/* Design Process Section */}
+        {/* Services Overview Section */}
         <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Interior Design Services</h2>
+            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
+              From concept to completion, we provide comprehensive interior solutions tailored to your style and needs.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Home Interior */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
+                  <FaHome className="text-3xl text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Home Interior</h3>
+                <p className="text-gray-600 mb-4">
+                  Complete home transformation with personalized design solutions.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <GiOfficeChair className="text-blue-500" />
+                    Living Room Design
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiBed className="text-blue-500" />
+                    Bedroom Makeovers
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiKitchenTap className="text-blue-500" />
+                    Kitchen Remodeling
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaBuilding className="text-blue-500" />
+                    Bathroom Renovation
+                  </li>
+                </ul>
+              </div>
+
+              {/* Commercial Interior */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-green-200 transition-colors">
+                  <FaBuilding className="text-3xl text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Commercial Interior</h3>
+                <p className="text-gray-600 mb-4">
+                  Professional spaces designed for productivity and brand identity.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <GiOfficeChair className="text-green-500" />
+                    Office Spaces
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaBuilding className="text-green-500" />
+                    Retail Stores
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiKitchenTap className="text-green-500" />
+                    Restaurants & Cafes
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaHome className="text-green-500" />
+                    Hotel Interiors
+                  </li>
+                </ul>
+              </div>
+
+              {/* Custom Furniture */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-purple-200 transition-colors">
+                  <FaCouch className="text-3xl text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Custom Furniture</h3>
+                <p className="text-gray-600 mb-4">
+                  Handcrafted furniture pieces tailored to your space and style.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <GiDesk className="text-purple-500" />
+                    TV Console & Entertainment
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaCouch className="text-purple-500" />
+                    Sofa, Couch & Chairs
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiBed className="text-purple-500" />
+                    Bedframes & Wardrobes
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiKitchenTap className="text-purple-500" />
+                    Kitchen Cabinetry
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiDesk className="text-purple-500" />
+                    Study Desks
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiWoodenChair className="text-purple-500" />
+                    Dining Sets & Side Boards
+                  </li>
+                </ul>
+              </div>
+
+              {/* Design Consultation */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-yellow-200 transition-colors">
+                  <FaLightbulb className="text-3xl text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Design Consultation</h3>
+                <p className="text-gray-600 mb-4">
+                  Expert advice for your space planning and design decisions.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <FaHome className="text-yellow-500" />
+                    Home Consultation
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaBuilding className="text-yellow-500" />
+                    Shortlet Optimization
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaBuilding className="text-yellow-500" />
+                    Hotel Design Planning
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiWoodenChair className="text-yellow-500" />
+                    Garden & Bar Layouts
+                  </li>
+                </ul>
+              </div>
+
+              {/* Interior Design Course */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-red-200 transition-colors">
+                  <FaGraduationCap className="text-3xl text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Design Education</h3>
+                <p className="text-gray-600 mb-4">
+                  Learn professional interior design with our comprehensive courses.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <FaGraduationCap className="text-red-500" />
+                    Beginner to Advanced Levels
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaTools className="text-red-500" />
+                    Practical Project Training
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaStar className="text-red-500" />
+                    Industry Expert Instructors
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MdDesignServices className="text-red-500" />
+                    Certification Program
+                  </li>
+                </ul>
+              </div>
+
+              {/* Full Service Package */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-indigo-200 transition-colors">
+                  <FaStar className="text-3xl text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Complete Package</h3>
+                <p className="text-gray-600 mb-4">
+                  End-to-end service from design to installation and maintenance.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <MdDesignServices className="text-indigo-500" />
+                    Design + Furniture + Installation
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaTools className="text-indigo-500" />
+                    Project Management
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaStar className="text-indigo-500" />
+                    Quality Assurance
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MdOutlineSupportAgent className="text-indigo-500" />
+                    After-Service Support
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Design Process Section */}
+        <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Design Process</h2>
             <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
@@ -37,9 +257,9 @@ export default function InteriorDesign() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Step 1 */}
-              <div className="bg-gray-50 p-8 rounded-lg text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <span className="text-3xl font-bold text-blue-600">1</span>
+              <div className="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
+                  <FaSearch className="text-2xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Discover &amp; Listen</h3>
                 <p className="text-gray-600">
@@ -48,9 +268,9 @@ export default function InteriorDesign() {
               </div>
 
               {/* Step 2 */}
-              <div className="bg-gray-50 p-8 rounded-lg text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <span className="text-3xl font-bold text-blue-600">2</span>
+              <div className="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
+                  <FaPalette className="text-2xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Concept &amp; Design</h3>
                 <p className="text-gray-600">
@@ -59,9 +279,9 @@ export default function InteriorDesign() {
               </div>
 
               {/* Step 3 */}
-              <div className="bg-gray-50 p-8 rounded-lg text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <span className="text-3xl font-bold text-blue-600">3</span>
+              <div className="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
+                  <FaTools className="text-2xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Execution &amp; Handover</h3>
                 <p className="text-gray-600">
@@ -72,157 +292,22 @@ export default function InteriorDesign() {
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section className="py-16 md:py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Portfolio</h2>
-            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
-              Explore a selection of our projects, showcasing our commitment to quality and creativity.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Project 1 */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="h-64 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
-                  <span className="text-white text-xl font-semibold">Modern Living Room</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Modern Living Room</h3>
-                  <p className="text-gray-600">
-                    A tranquil living space with a minimalist design, featuring natural light and neutral tones.
-                  </p>
-                </div>
-              </div>
-
-              {/* Project 2 */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="h-64 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
-                  <span className="text-white text-xl font-semibold">Contemporary Kitchen</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Contemporary Kitchen</h3>
-                  <p className="text-gray-600">
-                    A sleek kitchen with clean lines and premium materials, featuring a functional layout.
-                  </p>
-                </div>
-              </div>
-
-              {/* Project 3 */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="h-64 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center">
-                  <span className="text-white text-xl font-semibold">Elegant Bedroom</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Elegant Bedroom</h3>
-                  <p className="text-gray-600">
-                    A luxurious bedroom with sophisticated finishes, creating a calm and restful atmosphere.
-                  </p>
-                </div>
-              </div>
-
-              {/* Project 4 */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="h-64 bg-gradient-to-r from-gray-400 to-gray-600 flex items-center justify-center">
-                  <span className="text-white text-xl font-semibold">Functional Office Space</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Functional Office Space</h3>
-                  <p className="text-gray-600">
-                    A productive office space with ergonomic furniture and a focus on concentration and creativity.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
-              We pride ourselves on our client&apos;s satisfaction. Here&apos;s what they have to say about their experiences.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Testimonial 1 */}
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    PC
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-semibold">Project Client</h3>
-                    <p className="text-gray-600">Home Owner</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">
-                  &quot;The team at Integrated Services exceeded our expectations, delivering exceptional results. Their attention to detail and commitment to quality transformed our space into something beyond our imagination.&quot;
-                </p>
-              </div>
-
-              {/* Testimonial 2 */}
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    RS
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-semibold">Renovation Specialist</h3>
-                    <p className="text-gray-600">Business Director</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">
-                  &quot;Their professionalism and creative solutions impressed us throughout the project. They delivered a highly functional, beautifully designed space that perfectly meets our needs and reflects our brand identity.&quot;
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
+        {/* CTA Section */}
         <section className="py-16 md:py-20 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Ready to Start Your Project?</h2>
-            <p className="text-xl text-center max-w-3xl mx-auto mb-16">
-              Contact us today for a consultation. Our team will understand your ideas and bring your vision to life.
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Whether you need custom furniture, complete interior design, or professional consultation, we're here to bring your vision to life.
             </p>
-
-            <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8 text-gray-800">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-gray-700 mb-2">Name</label>
-                    <input 
-                      type="text" 
-                      placeholder="Your Name" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-gray-700 mb-2">Email</label>
-                    <input 
-                      type="email" 
-                      placeholder="Your Email" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    placeholder="Your Message" 
-                    rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  ></textarea>
-                </div>
-                <button 
-                  type="submit" 
-                  className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                <MdDesignServices className="text-xl" />
+                Start Your Project
+              </button>
+              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
+                <FaLightbulb className="text-xl" />
+                Book Consultation
+              </button>
             </div>
           </div>
         </section>
