@@ -1,6 +1,7 @@
 // pages/interior-design.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PortfolioGrid from '../components/PortfolioGrid'; // The dynamic part
 import { 
   FaHome, 
   FaBuilding, 
@@ -10,18 +11,14 @@ import {
   FaStar,
   FaSearch,
   FaPalette,
-  FaTools,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt
+  FaTools
 } from 'react-icons/fa';
 import { 
   GiOfficeChair, 
   GiKitchenTap, 
   GiBed, 
   GiDesk,
-  GiWoodenChair, // Replacement for GiDiningTable
-  GiBookshelf
+  GiWoodenChair
 } from 'react-icons/gi';
 import { 
   MdDesignServices,
@@ -34,7 +31,7 @@ export default function InteriorDesign() {
       <Navbar />
       
       <main className="flex-grow">
-        {/* Hero Section with Background Image */}
+        {/* Hero Section */}
         <section 
           className="relative py-16 md:py-44 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/decor.jpg')" }}
@@ -53,7 +50,7 @@ export default function InteriorDesign() {
           </div>
         </section>
 
-        {/* Services Overview Section */}
+        {/* Services Overview Section - FULL ORIGINAL CONTENT */}
         <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Interior Design Services</h2>
@@ -68,26 +65,12 @@ export default function InteriorDesign() {
                   <FaHome className="text-3xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Home Interior</h3>
-                <p className="text-gray-600 mb-4">
-                  Complete home transformation with personalized design solutions.
-                </p>
+                <p className="text-gray-600 mb-4">Complete home transformation with personalized design solutions.</p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <GiOfficeChair className="text-blue-500" />
-                    Living Room Design
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiBed className="text-blue-500" />
-                    Bedroom Makeovers
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiKitchenTap className="text-blue-500" />
-                    Kitchen Remodeling
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaBuilding className="text-blue-500" />
-                    Bathroom Renovation
-                  </li>
+                  <li className="flex items-center gap-2"><GiOfficeChair className="text-blue-500" /> Living Room Design</li>
+                  <li className="flex items-center gap-2"><GiBed className="text-blue-500" /> Bedroom Makeovers</li>
+                  <li className="flex items-center gap-2"><GiKitchenTap className="text-blue-500" /> Kitchen Remodeling</li>
+                  <li className="flex items-center gap-2"><FaBuilding className="text-blue-500" /> Bathroom Renovation</li>
                 </ul>
               </div>
 
@@ -97,26 +80,12 @@ export default function InteriorDesign() {
                   <FaBuilding className="text-3xl text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Commercial Interior</h3>
-                <p className="text-gray-600 mb-4">
-                  Professional spaces designed for productivity and brand identity.
-                </p>
+                <p className="text-gray-600 mb-4">Professional spaces designed for productivity and brand identity.</p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <GiOfficeChair className="text-green-500" />
-                    Office Spaces
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaBuilding className="text-green-500" />
-                    Retail Stores
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiKitchenTap className="text-green-500" />
-                    Restaurants & Cafes
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaHome className="text-green-500" />
-                    Hotel Interiors
-                  </li>
+                  <li className="flex items-center gap-2"><GiOfficeChair className="text-green-500" /> Office Spaces</li>
+                  <li className="flex items-center gap-2"><FaBuilding className="text-green-500" /> Retail Stores</li>
+                  <li className="flex items-center gap-2"><GiKitchenTap className="text-green-500" /> Restaurants & Cafes</li>
+                  <li className="flex items-center gap-2"><FaHome className="text-green-500" /> Hotel Interiors</li>
                 </ul>
               </div>
 
@@ -126,34 +95,13 @@ export default function InteriorDesign() {
                   <FaCouch className="text-3xl text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Custom Furniture</h3>
-                <p className="text-gray-600 mb-4">
-                  Handcrafted furniture pieces tailored to your space and style.
-                </p>
+                <p className="text-gray-600 mb-4">Handcrafted furniture pieces tailored to your space and style.</p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <GiDesk className="text-purple-500" />
-                    TV Console & Entertainment
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaCouch className="text-purple-500" />
-                    Sofa, Couch & Chairs
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiBed className="text-purple-500" />
-                    Bedframes & Wardrobes
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiKitchenTap className="text-purple-500" />
-                    Kitchen Cabinetry
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiDesk className="text-purple-500" />
-                    Study Desks
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiWoodenChair className="text-purple-500" />
-                    Dining Sets & Side Boards
-                  </li>
+                  <li className="flex items-center gap-2"><GiDesk className="text-purple-500" /> TV Console & Entertainment</li>
+                  <li className="flex items-center gap-2"><FaCouch className="text-purple-500" /> Sofa, Couch & Chairs</li>
+                  <li className="flex items-center gap-2"><GiBed className="text-purple-500" /> Bedframes & Wardrobes</li>
+                  <li className="flex items-center gap-2"><GiKitchenTap className="text-purple-500" /> Kitchen Cabinetry</li>
+                  <li className="flex items-center gap-2"><GiWoodenChair className="text-purple-500" /> Dining Sets & Side Boards</li>
                 </ul>
               </div>
 
@@ -163,26 +111,11 @@ export default function InteriorDesign() {
                   <FaLightbulb className="text-3xl text-yellow-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Design Consultation</h3>
-                <p className="text-gray-600 mb-4">
-                  Expert advice for your space planning and design decisions.
-                </p>
+                <p className="text-gray-600 mb-4">Expert advice for your space planning and design decisions.</p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <FaHome className="text-yellow-500" />
-                    Home Consultation
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaBuilding className="text-yellow-500" />
-                    Shortlet Optimization
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaBuilding className="text-yellow-500" />
-                    Hotel Design Planning
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiWoodenChair className="text-yellow-500" />
-                    Garden & Bar Layouts
-                  </li>
+                  <li className="flex items-center gap-2"><FaHome className="text-yellow-500" /> Home Consultation</li>
+                  <li className="flex items-center gap-2"><FaBuilding className="text-yellow-500" /> Shortlet Optimization</li>
+                  <li className="flex items-center gap-2"><FaBuilding className="text-yellow-500" /> Hotel Design Planning</li>
                 </ul>
               </div>
 
@@ -192,26 +125,10 @@ export default function InteriorDesign() {
                   <FaGraduationCap className="text-3xl text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Design Education</h3>
-                <p className="text-gray-600 mb-4">
-                  Learn professional interior design with our comprehensive courses.
-                </p>
+                <p className="text-gray-600 mb-4">Learn professional interior design with our comprehensive courses.</p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <FaGraduationCap className="text-red-500" />
-                    Beginner to Advanced Levels
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaTools className="text-red-500" />
-                    Practical Project Training
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaStar className="text-red-500" />
-                    Industry Expert Instructors
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <MdDesignServices className="text-red-500" />
-                    Certification Program
-                  </li>
+                  <li className="flex items-center gap-2"><FaGraduationCap className="text-red-500" /> Beginner to Advanced</li>
+                  <li className="flex items-center gap-2"><FaTools className="text-red-500" /> Practical Project Training</li>
                 </ul>
               </div>
 
@@ -221,26 +138,10 @@ export default function InteriorDesign() {
                   <FaStar className="text-3xl text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Complete Package</h3>
-                <p className="text-gray-600 mb-4">
-                  End-to-end service from design to installation and maintenance.
-                </p>
+                <p className="text-gray-600 mb-4">End-to-end service from design to installation and maintenance.</p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <MdDesignServices className="text-indigo-500" />
-                    Design + Furniture + Installation
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaTools className="text-indigo-500" />
-                    Project Management
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaStar className="text-indigo-500" />
-                    Quality Assurance
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <MdOutlineSupportAgent className="text-indigo-500" />
-                    After-Service Support
-                  </li>
+                  <li className="flex items-center gap-2"><MdDesignServices className="text-indigo-500" /> Design + Furniture + Installation</li>
+                  <li className="flex items-center gap-2"><MdOutlineSupportAgent className="text-indigo-500" /> After-Service Support</li>
                 </ul>
               </div>
             </div>
@@ -251,62 +152,51 @@ export default function InteriorDesign() {
         <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Design Process</h2>
-            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
-              Our interior design process consists of several phases: we start with understanding your creative vision, then develop concepts and plans. Our team manages all needs, ensuring a seamless and enjoyable experience.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Step 1 */}
-              <div className="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
-                  <FaSearch className="text-2xl text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Discover &amp; Listen</h3>
-                <p className="text-gray-600">
-                  We begin by understanding your needs, style, and the potential of your space.
-                </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <FaSearch className="text-2xl text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Discover & Listen</h3>
+                <p className="text-gray-600">We begin by understanding your needs, style, and the potential of your space.</p>
               </div>
-
-              {/* Step 2 */}
-              <div className="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
-                  <FaPalette className="text-2xl text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Concept &amp; Design</h3>
-                <p className="text-gray-600">
-                  Our team translates your vision into a detailed design plan and 3D model for approval.
-                </p>
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <FaPalette className="text-2xl text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Concept & Design</h3>
+                <p className="text-gray-600">Our team translates your vision into a detailed design plan and 3D model.</p>
               </div>
-
-              {/* Step 3 */}
-              <div className="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
-                  <FaTools className="text-2xl text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Execution &amp; Handover</h3>
-                <p className="text-gray-600">
-                  We manage the project from procurement to installation, delivering your dream space efficiently.
-                </p>
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <FaTools className="text-2xl text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Execution & Handover</h3>
+                <p className="text-gray-600">We manage the project from procurement to installation delivering your dream space.</p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* --- NEW DYNAMIC PORTFOLIO SECTION --- */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our Recent Transformations</h2>
+            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
+              Explore our latest interior design projects and custom furniture installations.
+            </p>
+            
+            {/* The magic component that connects to your Admin CMS */}
+            <PortfolioGrid category="interior-design" />
+            
+          </div>
+        </section>
+        {/* --- END DYNAMIC SECTION --- */}
+
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Whether you need custom furniture, complete interior design, or professional consultation, we&apos;re here to bring your vision to life.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-                <MdDesignServices className="text-xl" />
-                Start Your Project
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center gap-2">
+                <MdDesignServices /> Start Your Project
               </button>
-              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
-                <FaLightbulb className="text-xl" />
-                Book Consultation
+              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-white hover:text-blue-600 flex items-center justify-center gap-2">
+                <FaLightbulb /> Book Consultation
               </button>
             </div>
           </div>

@@ -1,6 +1,7 @@
 // pages/laundry-services.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PortfolioGrid from '../components/PortfolioGrid'; // Added the dynamic grid import
 import { 
   FaTshirt,
   FaTruck,
@@ -235,6 +236,21 @@ export default function LaundryServices() {
             </div>
           </div>
         </section>
+
+        {/* --- NEW DYNAMIC PORTFOLIO SECTION --- */}
+        <section className="py-16 md:py-24 bg-white border-t">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Our Work & Packages</h2>
+            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
+              Browse through our premium cleaning results and special laundry bundles.
+            </p>
+            
+            {/* The component that connects to your Admin CMS under 'laundry-services' */}
+            <PortfolioGrid category="laundry-services" />
+            
+          </div>
+        </section>
+        {/* --- END DYNAMIC SECTION --- */}
 
         {/* Service Options Section */}
         <section className="py-16 md:py-20 bg-gray-50">

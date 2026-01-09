@@ -1,33 +1,37 @@
 // pages/food-services.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PortfolioGrid from '../components/PortfolioGrid'; 
 import { 
-  FaUtensils,
-  FaTruck,
-  FaHome,
+  FaUtensils, 
+  FaMotorcycle, 
+  FaUsers, 
   FaStar,
   FaClock,
+  FaCheckCircle,
+  FaLeaf,
   FaPhoneAlt,
+  FaEnvelope,
   FaMapMarkerAlt,
-  FaCheck
+  FaShieldAlt,
+  FaShoppingCart
 } from 'react-icons/fa';
 import { 
-  MdRestaurant,
-  MdLocalDining,
+  MdOutlineRestaurantMenu,
   MdDeliveryDining,
-  MdEventAvailable
+  MdOutlineOutdoorGrill, // Replaced MdOutlineCatering with a valid icon
+  MdOutlineFastfood
 } from 'react-icons/md';
 import { 
   GiHotMeal,
-  GiForkKnifeSpoon,
-  GiAfrica,
-  GiCookingPot
-} from 'react-icons/gi';
-import { useState } from 'react';
+  GiBowlOfRice,
+  GiCookingPot,
+  GiChefToque,
+  GiNoodles,
+  GiPizzaSlice
+} from 'react-icons/gi'; // Fixed typo from 'git-icons' to 'react-icons'
 
 export default function FoodServices() {
-  const [selectedPackage, setSelectedPackage] = useState('');
-
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
@@ -38,15 +42,15 @@ export default function FoodServices() {
           className="relative py-16 md:py-44 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/food-hero.jpg')" }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Authentic Local Cuisine & Delivery</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Delicious Meals & Catering Services</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
-              Experience the rich flavors of traditional dishes with our premium food services, featuring local specialties and convenient delivery options.
+              Experience the finest culinary delights with our home delivery and professional catering solutions tailored to your taste.
             </p>
             <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center mx-auto gap-2">
-              <MdRestaurant className="text-xl" />
+              <MdOutlineRestaurantMenu className="text-xl" />
               Order Now
             </button>
           </div>
@@ -55,182 +59,178 @@ export default function FoodServices() {
         {/* Services Overview Section */}
         <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Food Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Culinary Services</h2>
             <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
-              From traditional local dishes to convenient delivery services, we bring authentic flavors right to your doorstep.
+              From daily home-cooked meals to large event catering, we bring taste and quality to your table.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Local Dishes */}
+              {/* Home Delivery */}
               <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
-                  <GiAfrica className="text-3xl text-blue-600" />
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-orange-200 transition-colors">
+                  <MdDeliveryDining className="text-3xl text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Local Dishes</h3>
+                <h3 className="text-xl font-semibold mb-4">Home Delivery</h3>
                 <p className="text-gray-600 mb-4">
-                  Authentic traditional meals prepared with fresh ingredients and traditional recipes.
+                  Freshly prepared meals delivered straight to your doorstep for your convenience.
                 </p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
                   <li className="flex items-center gap-2">
-                    <GiHotMeal className="text-blue-500" />
-                    Traditional Soups & Stews
+                    <FaMotorcycle className="text-orange-500" />
+                    Fast & Reliable Delivery
                   </li>
                   <li className="flex items-center gap-2">
-                    <GiCookingPot className="text-blue-500" />
-                    Local Rice Dishes
+                    <GiHotMeal className="text-orange-500" />
+                    Piping Hot Meals
                   </li>
                   <li className="flex items-center gap-2">
-                    <GiForkKnifeSpoon className="text-blue-500" />
-                    Authentic Swallows
+                    <FaClock className="text-orange-500" />
+                    Lunch & Dinner Options
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaStar className="text-blue-500" />
-                    Family Recipes
+                    <MdOutlineFastfood className="text-orange-500" />
+                    Diverse Menu Selection
                   </li>
                 </ul>
               </div>
 
-              {/* Delivery Service */}
-              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-green-200 transition-colors">
-                  <FaTruck className="text-3xl text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Delivery Service</h3>
-                <p className="text-gray-600 mb-4">
-                  Fast and reliable food delivery to your home, office, or event location.
-                </p>
-                <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <MdDeliveryDining className="text-green-500" />
-                    Quick Delivery
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaHome className="text-green-500" />
-                    Home & Office Delivery
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaClock className="text-green-500" />
-                    Timely Service
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaCheck className="text-green-500" />
-                    Quality Guarantee
-                  </li>
-                </ul>
-              </div>
-
-              {/* Catering Services */}
-              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-purple-200 transition-colors">
-                  <MdEventAvailable className="text-3xl text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Catering Services</h3>
-                <p className="text-gray-600 mb-4">
-                  Professional catering for events, parties, and corporate functions.
-                </p>
-                <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <MdEventAvailable className="text-purple-500" />
-                    Event Catering
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaUtensils className="text-purple-500" />
-                    Corporate Events
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiForkKnifeSpoon className="text-purple-500" />
-                    Private Parties
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaStar className="text-purple-500" />
-                    Custom Menus
-                  </li>
-                </ul>
-              </div>
-
-              {/* Traditional Specialties */}
-              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-yellow-200 transition-colors">
-                  <GiHotMeal className="text-3xl text-yellow-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Traditional Specialties</h3>
-                <p className="text-gray-600 mb-4">
-                  Signature local dishes that showcase our culinary heritage and expertise.
-                </p>
-                <ul className="text-sm text-gray-500 text-left space-y-2">
-                  <li className="flex items-center gap-2">
-                    <GiCookingPot className="text-yellow-500" />
-                    Signature Soups
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiHotMeal className="text-yellow-500" />
-                    Local Delicacies
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <GiForkKnifeSpoon className="text-yellow-500" />
-                    Traditional Sides
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaStar className="text-yellow-500" />
-                    Chef&apos;s Specials
-                  </li>
-                </ul>
-              </div>
-
-              {/* Meal Plans */}
+              {/* Event Catering */}
               <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
                 <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-red-200 transition-colors">
-                  <MdLocalDining className="text-3xl text-red-600" />
+                  <MdOutlineOutdoorGrill className="text-3xl text-red-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Meal Plans</h3>
+                <h3 className="text-xl font-semibold mb-4">Event Catering</h3>
                 <p className="text-gray-600 mb-4">
-                  Customized meal plans for individuals, families, and special dietary needs.
+                  Professional catering services for weddings, parties, and corporate events of all sizes.
                 </p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
                   <li className="flex items-center gap-2">
-                    <MdLocalDining className="text-red-500" />
-                    Daily Meal Plans
+                    <FaUsers className="text-red-500" />
+                    Large Group Handling
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaUtensils className="text-red-500" />
-                    Weekly Subscriptions
+                    <GiCookingPot className="text-red-500" />
+                    Custom Menu Planning
                   </li>
                   <li className="flex items-center gap-2">
-                    <GiHotMeal className="text-red-500" />
-                    Family Packages
+                    <FaStar className="text-red-500" />
+                    Professional Service Staff
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaCheck className="text-red-500" />
-                    Dietary Accommodations
+                    <GiChefToque className="text-red-500" />
+                    Expert Culinary Team
                   </li>
                 </ul>
               </div>
 
-              {/* Consultation */}
+              {/* Corporate Meals */}
               <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
-                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-indigo-200 transition-colors">
-                  <FaUtensils className="text-3xl text-indigo-600" />
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors">
+                  <FaUtensils className="text-3xl text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Menu Consultation</h3>
+                <h3 className="text-xl font-semibold mb-4">Corporate Meals</h3>
                 <p className="text-gray-600 mb-4">
-                  Expert guidance for event planning and custom menu creation.
+                  Tailored meal plans and delivery services for offices and business organizations.
                 </p>
                 <ul className="text-sm text-gray-500 text-left space-y-2">
                   <li className="flex items-center gap-2">
-                    <FaUtensils className="text-indigo-500" />
-                    Event Menu Planning
+                    <FaCheckCircle className="text-blue-500" />
+                    Daily Office Lunch Delivery
                   </li>
                   <li className="flex items-center gap-2">
-                    <GiForkKnifeSpoon className="text-indigo-500" />
-                    Custom Recipe Development
+                    <FaLeaf className="text-blue-500" />
+                    Healthy & Nutritious Options
                   </li>
                   <li className="flex items-center gap-2">
-                    <MdEventAvailable className="text-indigo-500" />
-                    Catering Coordination
+                    <GiBowlOfRice className="text-blue-500" />
+                    Consistent Taste & Quality
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaStar className="text-indigo-500" />
-                    Professional Advice
+                    <FaShieldAlt className="text-blue-500" />
+                    Hygienic Food Preparation
+                  </li>
+                </ul>
+              </div>
+
+              {/* Specialized Cuisines */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-yellow-200 transition-colors">
+                  <GiNoodles className="text-3xl text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Specialized Cuisines</h3>
+                <p className="text-gray-600 mb-4">
+                  Experience a wide variety of local and international dishes prepared by experts.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <GiBowlOfRice className="text-yellow-500" />
+                    Traditional Local Dishes
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiPizzaSlice className="text-yellow-500" />
+                    Continental Cuisines
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiNoodles className="text-yellow-500" />
+                    Asian Fusion Options
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MdOutlineRestaurantMenu className="text-yellow-500" />
+                    Seasonal Specialties
+                  </li>
+                </ul>
+              </div>
+
+              {/* Meal Subscription */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-purple-200 transition-colors">
+                  <FaShoppingCart className="text-3xl text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Meal Subscriptions</h3>
+                <p className="text-gray-600 mb-4">
+                  Convenient and affordable weekly or monthly meal plans for busy individuals.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <FaClock className="text-purple-500" />
+                    Weekly Meal Planning
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaCheckCircle className="text-purple-500" />
+                    Customizable Packages
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <GiHotMeal className="text-purple-500" />
+                    Fresh Daily Deliveries
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaShieldAlt className="text-purple-500" />
+                    Quality Guaranteed
+                  </li>
+                </ul>
+              </div>
+
+              {/* Culinary Consultation */}
+              <div className="bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 group">
+                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-indigo-200 transition-colors">
+                  <GiChefToque className="text-3xl text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Culinary Consultation</h3>
+                <p className="text-gray-600 mb-4">
+                  Expert advice for menu development, event planning, and culinary management.
+                </p>
+                <ul className="text-sm text-gray-500 text-left space-y-2">
+                  <li className="flex items-center gap-2">
+                    <MdOutlineRestaurantMenu className="text-indigo-500" />
+                    Menu Design & Development
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaUsers className="text-indigo-500" />
+                    Event Food Management
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaShieldAlt className="text-indigo-500" />
+                    Safety & Quality Standards
                   </li>
                 </ul>
               </div>
@@ -238,90 +238,60 @@ export default function FoodServices() {
           </div>
         </section>
 
-        {/* Popular Dishes Section */}
+        {/* --- DYNAMIC PORTFOLIO SECTION --- */}
+        <section className="py-16 md:py-24 bg-white border-t">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Menu & Food Gallery</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+              Explore our latest culinary creations and catering setups.
+            </p>
+            
+            <PortfolioGrid category="food-services" />
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
         <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Popular Local Dishes</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Traditional Soups */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="h-56 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center group-hover:from-blue-500 group-hover:to-blue-700 transition-colors">
-                  <GiCookingPot className="text-4xl text-white" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <GiCookingPot className="text-blue-500" />
-                    <span className="text-sm font-semibold text-blue-600">TRADITIONAL</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Signature Soups</h3>
-                  <p className="text-gray-600 mb-4">
-                    Rich, flavorful traditional soups served with your choice of swallow - a true taste of home.
-                  </p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2 transition-colors">
-                    View Menu <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
-                </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose Our Kitchen?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <FaStar className="text-4xl text-yellow-500 mx-auto mb-4" />
+                <h4 className="font-bold">Premium Quality</h4>
+                <p className="text-sm text-gray-500">Only the freshest ingredients.</p>
               </div>
-
-              {/* Rice Dishes */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="h-56 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center group-hover:from-green-500 group-hover:to-green-700 transition-colors">
-                  <GiHotMeal className="text-4xl text-white" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <GiHotMeal className="text-green-500" />
-                    <span className="text-sm font-semibold text-green-600">POPULAR</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Local Rice Dishes</h3>
-                  <p className="text-gray-600 mb-4">
-                    Authentic rice preparations with traditional spices and ingredients, perfect for any occasion.
-                  </p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2 transition-colors">
-                    View Menu <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
-                </div>
+              <div>
+                <FaLeaf className="text-4xl text-green-500 mx-auto mb-4" />
+                <h4 className="font-bold">Healthy & Hygiene</h4>
+                <p className="text-sm text-gray-500">Strict safety standards.</p>
               </div>
-
-              {/* Special Delicacies */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="h-56 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center group-hover:from-purple-500 group-hover:to-purple-700 transition-colors">
-                  <GiForkKnifeSpoon className="text-4xl text-white" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <GiForkKnifeSpoon className="text-purple-500" />
-                    <span className="text-sm font-semibold text-purple-600">SPECIALTY</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Local Delicacies</h3>
-                  <p className="text-gray-600 mb-4">
-                    Unique traditional dishes and snacks that showcase our rich culinary heritage and flavors.
-                  </p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2 transition-colors">
-                    View Menu <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
-                </div>
+              <div>
+                <FaClock className="text-4xl text-blue-500 mx-auto mb-4" />
+                <h4 className="font-bold">On-Time Delivery</h4>
+                <p className="text-sm text-gray-500">Always prompt service.</p>
+              </div>
+              <div>
+                <FaUtensils className="text-4xl text-orange-500 mx-auto mb-4" />
+                <h4 className="font-bold">Diverse Menu</h4>
+                <p className="text-sm text-gray-500">Wide range of cuisines.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Taste Authentic Local Flavors</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Experience the true taste of traditional cuisine with our authentic local dishes and convenient delivery service. Perfect for family meals, events, or everyday dining.
+        <section className="py-16 md:py-20 bg-gradient-to-r from-orange-500 to-red-600 text-white text-center">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Hungry for Quality Food?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Whether it&apos;s a single meal or an event for 500 people, we are ready to serve you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-                <MdRestaurant className="text-xl" />
-                Order Now
+              <button className="bg-white text-orange-600 px-8 py-3 rounded-md font-bold text-lg hover:bg-gray-100 flex items-center justify-center gap-2">
+                <MdDeliveryDining className="text-2xl" /> Place Order
               </button>
-              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
-                <MdEventAvailable className="text-xl" />
-                Book Catering
+              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-bold text-lg hover:bg-white hover:text-orange-600 flex items-center justify-center gap-2 transition-all">
+                <MdOutlineOutdoorGrill className="text-2xl" /> Get Catering Quote
               </button>
             </div>
           </div>

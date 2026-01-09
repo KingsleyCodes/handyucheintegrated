@@ -1,6 +1,7 @@
 // pages/real-estate.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PortfolioGrid from '../components/PortfolioGrid'; // Added dynamic grid
 import { 
   FaHome, 
   FaBuilding, 
@@ -10,8 +11,6 @@ import {
   FaHandshake,
   FaClipboardList,
   FaTools,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
   FaShieldAlt
 } from 'react-icons/fa';
 import { 
@@ -237,72 +236,16 @@ export default function RealEstate() {
           </div>
         </section>
 
-        {/* Featured Listings Section */}
+        {/* Featured Listings Section - NOW DYNAMIC */}
         <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Featured Properties</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Rental Property */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="h-56 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center group-hover:from-blue-500 group-hover:to-blue-700 transition-colors">
-                  <GiHouse className="text-4xl text-white" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <GiHouse className="text-blue-500" />
-                    <span className="text-sm font-semibold text-blue-600">FOR RENT</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Contemporary Family Home</h3>
-                  <p className="text-gray-600 mb-4">
-                    Spacious 4-bedroom home with a large backyard, modern amenities, and open-concept living areas.
-                  </p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2 transition-colors">
-                    View Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
-                </div>
-              </div>
+            {/* This component replaces your static cards. 
+                It pulls real-time data from Firebase for 'real-estate' category.
+            */}
+            <PortfolioGrid category="real-estate" />
 
-              {/* Shortlet Property */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="h-56 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center group-hover:from-green-500 group-hover:to-green-700 transition-colors">
-                  <MdOutlineShortText className="text-4xl text-white" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <MdOutlineShortText className="text-green-500" />
-                    <span className="text-sm font-semibold text-green-600">SHORTLET</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Upscale City Apartment</h3>
-                  <p className="text-gray-600 mb-4">
-                    Stylish 2-bedroom apartment in the heart of downtown with stunning views and premium finishes.
-                  </p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2 transition-colors">
-                    View Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Sale Property */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <div className="h-56 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center group-hover:from-purple-500 group-hover:to-purple-700 transition-colors">
-                  <MdSell className="text-4xl text-white" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <MdSell className="text-purple-500" />
-                    <span className="text-sm font-semibold text-purple-600">FOR SALE</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Prime Commercial Space</h3>
-                  <p className="text-gray-600 mb-4">
-                    High-traffic commercial property with ample parking, modern facilities, and excellent visibility.
-                  </p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2 transition-colors">
-                    View Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
