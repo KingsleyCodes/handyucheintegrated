@@ -1,7 +1,7 @@
 // pages/food-services.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import PortfolioGrid from '../components/PortfolioGrid'; 
+import PublicGallery from '../components/PublicGallery'; 
 import { 
   FaUtensils, 
   FaMotorcycle, 
@@ -10,16 +10,13 @@ import {
   FaClock,
   FaCheckCircle,
   FaLeaf,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
   FaShieldAlt,
   FaShoppingCart
 } from 'react-icons/fa';
 import { 
   MdOutlineRestaurantMenu,
   MdDeliveryDining,
-  MdOutlineOutdoorGrill, // Replaced MdOutlineCatering with a valid icon
+  MdOutlineOutdoorGrill,
   MdOutlineFastfood
 } from 'react-icons/md';
 import { 
@@ -29,7 +26,7 @@ import {
   GiChefToque,
   GiNoodles,
   GiPizzaSlice
-} from 'react-icons/gi'; // Fixed typo from 'git-icons' to 'react-icons'
+} from 'react-icons/gi';
 
 export default function FoodServices() {
   return (
@@ -238,7 +235,7 @@ export default function FoodServices() {
           </div>
         </section>
 
-        {/* --- DYNAMIC PORTFOLIO SECTION --- */}
+        {/* --- DYNAMIC CLOUDINARY + FIRESTORE GALLERY SECTION WITH LIGHTBOX --- */}
         <section className="py-16 md:py-24 bg-white border-t">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Menu & Food Gallery</h2>
@@ -246,7 +243,7 @@ export default function FoodServices() {
               Explore our latest culinary creations and catering setups.
             </p>
             
-            <PortfolioGrid category="food-services" />
+            <PublicGallery category="food-services" />
           </div>
         </section>
 

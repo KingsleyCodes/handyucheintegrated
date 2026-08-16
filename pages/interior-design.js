@@ -1,7 +1,7 @@
 // pages/interior-design.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import PortfolioGrid from '../components/PortfolioGrid'; // The dynamic part
+import PublicGallery from '../components/PublicGallery';
 import { 
   FaHome, 
   FaBuilding, 
@@ -172,20 +172,17 @@ export default function InteriorDesign() {
           </div>
         </section>
 
-        {/* --- NEW DYNAMIC PORTFOLIO SECTION --- */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our Recent Transformations</h2>
-            <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
+        {/* --- DYNAMIC CLOUDINARY + FIRESTORE GALLERY SECTION --- */}
+        <section className="py-16 md:py-24 bg-white border-t">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Recent Transformations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
               Explore our latest interior design projects and custom furniture installations.
             </p>
             
-            {/* The magic component that connects to your Admin CMS */}
-            <PortfolioGrid category="interior-design" />
-            
+            <PublicGallery category="interior-design" />
           </div>
         </section>
-        {/* --- END DYNAMIC SECTION --- */}
 
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
@@ -195,7 +192,7 @@ export default function InteriorDesign() {
               <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center gap-2">
                 <MdDesignServices /> Start Your Project
               </button>
-              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-white hover:text-blue-600 flex items-center justify-center gap-2">
+              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-white hover:text-blue-600 flex items-center justify-center gap-2 transition-all">
                 <FaLightbulb /> Book Consultation
               </button>
             </div>
