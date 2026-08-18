@@ -39,12 +39,17 @@ export default function Home() {
                 we deliver unparalleled excellence in every detail.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-[#B8860B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#A67C0A] transform hover:scale-105 transition-all duration-300 shadow-2xl">
-                  Discover Excellence
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
-                  Book Consultation
-                </button>
+                <Link href="/contact">
+        <button className="bg-[#B8860B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#A67C0A] transform hover:scale-105 transition-all duration-300 shadow-2xl">
+          Discover Excellence
+        </button>
+      </Link>
+
+      <Link href="/contact">
+        <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
+          Book Consultation
+        </button>
+      </Link>
               </div>
             </div>
           </div>
