@@ -70,7 +70,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <FaPhone className="w-4 h-4 text-[#B8860B] flex-shrink-0" />
-                <span className="text-gray-300">07036131127</span>
+                <span className="text-gray-300">07036131127(Whatsapp Ony)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="w-4 h-4 text-[#B8860B] flex-shrink-0" />
