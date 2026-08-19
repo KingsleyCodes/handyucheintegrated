@@ -76,7 +76,9 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600 text-lg">09062166841</p>
+                      <p className="text-gray-600 text-lg">07036131127(Whatsapp Only)
+                      
+                      </p>
                       <p className="text-gray-500">Mon-Fri: 8:00 AM - 6:00 PM</p>
                     </div>
                   </div>
@@ -103,8 +105,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">Office</h3>
-                      <p className="text-gray-600">Rich Royal Estate, FHA</p>
-                      <p className="text-gray-600">behind Living Faith Church,Lugbe 900107. FCT</p>
+                      <p className="text-gray-600">Panteka, Zone 8</p>
+                      <p className="text-gray-600">Lugbe Abuja</p>
                       <p className="text-gray-500">By appointment only</p>
                     </div>
                   </div>
