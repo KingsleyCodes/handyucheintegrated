@@ -24,6 +24,7 @@ import {
   MdDesignServices,
   MdOutlineSupportAgent
 } from 'react-icons/md';
+import Link from 'next/link';
 
 export default function InteriorDesign() {
   return (
@@ -43,10 +44,12 @@ export default function InteriorDesign() {
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
               Complete interior transformation with custom furniture, professional design services, and expert consultation.
             </p>
+            <Link href="/contact">
             <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center mx-auto gap-2">
               <MdDesignServices className="text-xl" />
               Start Your Project
             </button>
+            </Link>
           </div>
         </section>
 

@@ -1,4 +1,5 @@
 // pages/real-estate.js
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PublicGallery from '../components/PublicGallery';
@@ -43,10 +44,12 @@ export default function RealEstate() {
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
               Your trusted partner for rentals, shortlets, property sales, and comprehensive real estate marketing services.
             </p>
+            <Link href="/contact">
             <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center mx-auto gap-2">
               <MdRealEstateAgent className="text-xl" />
               Explore Properties
             </button>
+            </Link>
           </div>
         </section>
 

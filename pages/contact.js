@@ -1,8 +1,8 @@
 // pages/contact.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import InteractiveMap from '../components/InteractiveMap'; // ← Add this import
 import { useState } from 'react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,10 +23,24 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you within 24 hours.');
-    // Reset form
+
+    // Your exact WhatsApp phone number with country code
+    const phoneNumber = '2347036131127';
+
+    // Format the message nicely for WhatsApp
+    const text = 
+      `*New Contact Form Inquiry* %0a%0a` +
+      `*Name:* ${formData.firstName} ${formData.lastName}%0a` +
+      `*Email:* ${formData.email}%0a` +
+      `*Phone:* ${formData.phone || 'N/A'}%0a` +
+      `*Service:* ${formData.service}%0a` +
+      `*Message:* ${formData.message}`;
+
+    // Open WhatsApp with the formatted text
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+    window.open(whatsappUrl, '_blank');
+
+    // Reset form after triggering
     setFormData({
       firstName: '',
       lastName: '',
@@ -76,9 +90,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600 text-lg">07036131127(Whatsapp Only)
-                      
-                      </p>
+                      <p className="text-gray-600 text-lg">07036131127 (Whatsapp Only)</p>
                       <p className="text-gray-500">Mon-Fri: 8:00 AM - 6:00 PM</p>
                     </div>
                   </div>
@@ -125,21 +137,21 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Social Media */}
+                {/* Social Media with React Icons */}
                 <div className="pt-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Follow Our Work</h3>
                   <div className="flex space-x-4">
-                    <a href="#" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors duration-300">
-                      <span className="text-gray-600 text-lg">📘</span>
+                    <a href="#" aria-label="Facebook" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                      <FaFacebookF className="w-5 h-5" />
                     </a>
-                    <a href="#" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors duration-300">
-                      <span className="text-gray-600 text-lg">📷</span>
+                    <a href="#" aria-label="Instagram" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 text-gray-700 hover:text-pink-600 transition-colors duration-300">
+                      <FaInstagram className="w-5 h-5" />
                     </a>
-                    <a href="#" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors duration-300">
-                      <span className="text-gray-600 text-lg">💼</span>
+                    <a href="#" aria-label="LinkedIn" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 text-gray-700 hover:text-blue-700 transition-colors duration-300">
+                      <FaLinkedinIn className="w-5 h-5" />
                     </a>
-                    <a href="#" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors duration-300">
-                      <span className="text-gray-600 text-lg">🐦</span>
+                    <a href="#" aria-label="Twitter" className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 text-gray-700 hover:text-sky-500 transition-colors duration-300">
+                      <FaTwitter className="w-5 h-5" />
                     </a>
                   </div>
                 </div>
@@ -235,32 +247,17 @@ export default function Contact() {
 
                   <button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-[#0D5C3E] to-[#1A3C2E] text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                    className="w-full bg-gradient-to-r from-[#0D5C3E] to-[#1A3C2E] text-white py-4 rounded-lg font-semibold text-lg hover:opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
                   >
-                    Send Message
+                    <span>Send Message via WhatsApp</span>
                   </button>
 
                   <p className="text-center text-gray-500 text-sm">
-                    * Required fields. We respect your privacy and will never share your information.
+                    * Required fields. Clicking will open WhatsApp with your details pre-loaded.
                   </p>
                 </form>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Map Section - REPLACED WITH INTERACTIVE MAP */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Schedule an appointment to visit our showroom and experience our services firsthand.
-              </p>
-            </div>
-            
-            {/* Replace the placeholder with your InteractiveMap component */}
-            <InteractiveMap />
           </div>
         </section>
       </main>

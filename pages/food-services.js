@@ -1,4 +1,5 @@
 // pages/food-services.js
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PublicGallery from '../components/PublicGallery'; 
@@ -46,10 +47,12 @@ export default function FoodServices() {
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
               Experience the finest culinary delights with our home delivery and professional catering solutions tailored to your taste.
             </p>
+            <Link href="/contact">
             <button className="bg-white text-blue-700 px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 flex items-center justify-center mx-auto gap-2">
               <MdOutlineRestaurantMenu className="text-xl" />
               Order Now
             </button>
+            </Link>
           </div>
         </section>
 
