@@ -56,15 +56,14 @@ export default function Contact() {
       <Navbar />
       
       <main className="flex-grow pt-24">
-        {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+      
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Get In Touch</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Ready to transform your living experience? Contact us for a personalized consultation and let&apos;s create something amazing together.
             </p>
           </div>
-        </section>
+        
 
         {/* Contact Section */}
         <section className="py-20 bg-white">
