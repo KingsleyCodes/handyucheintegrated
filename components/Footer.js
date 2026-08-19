@@ -79,8 +79,7 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-4 h-4 text-[#B8860B] flex-shrink-0 mt-1" />
                 <span className="text-gray-300">
-                  Rich Royal Estate, FHA<br />
-                  Behind Living Faith Church<br />
+                   Panteka, Zone 8<br />
                   Lugbe 900107, FCT
                 </span>
               </div>
