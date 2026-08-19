@@ -56,7 +56,7 @@ const MapComponent = ({ location }) => {
       const newMarker = new window.google.maps.Marker({
         position: location,
         map: map,
-        title: 'Rich Royal Estate, FHA, behind Living Faith Church, Municipal, Lugbe 900107, FCT',
+        title: 'Panteka, Zone 8, Lugbe 900107, FCT',
         animation: window.google.maps.Animation.DROP,
       });
 
@@ -129,7 +129,7 @@ export default function InteractiveMap() {
       <div className="text-center mt-6">
         <p className="text-gray-800 font-bold text-base">Our Location</p>
         <p className="text-gray-500 text-xs sm:text-sm mt-1 max-w-md mx-auto">
-          Rich Royal Estate, FHA, behind Living Faith Church, Municipal, Lugbe 900107, FCT
+          Panteka, Zone 8, Lugbe 900107, FCT
         </p>
         <button
           type="button"
